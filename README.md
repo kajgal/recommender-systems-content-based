@@ -30,16 +30,14 @@ Most of the code belongs to **[Piotr Zioło](https://github.com/PiotrZiolo)**, w
 
 1. Install [Anaconda](https://www.anaconda.com/products/individual) with Python 3.8.
 2. Install [Visual Studio Code](https://code.visualstudio.com/docs/?dv=win) for comfortable working with jupyter notebooks
-3. Prepare your conda environment (instructions given for Windows)
+3. Open CMD and go to project folder where you can find requirements.txt file - it contains information required to correctly create environment
+4. Prepare your conda environment (instructions given for Windows 64bit)
 ```
-conda create --name rs-cb-env py38 python=3.8.0 
+conda create --name rs-cb-env --file requirements.txt
 ```
-4. Activate your newly created environment
+5. Activate your newly created environment
 ```
 conda activate rs-cb-env
-```
-5. Install all required packages:
-```
 ```
 6. Open main folder by Visual Studio Code and set operative environment to rs-cb-env
 7. Start playing with the code!
