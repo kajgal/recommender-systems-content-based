@@ -95,6 +95,29 @@ Second nuisance was how to treat new user. It was important to handle it somehow
 #### Tunning
 Tunning was destructive for me and my computer - I tuned different compositions for 4 days straight :skull:. It was really fun to wake up and see a little better result in 3rd decimal place again and again ... I focused on tunning RandomForest model and XGBoost. I had different parameters based on configuration (which user features method, unique negative interactions etc. - all stuff i wrote about) but finally I sticked to the parameters that are calculated in notebook. Tunning the SVR model was the hardest and I gave up on tunning this as 1 eval took nearly 180 minutes. I thought XGBoost will be the longest but SVR is on another level when it comes to tunning time (I assume this is because I have too many features?)
 
+Unfortunately, I did not write down all the tuning results from the beginning, I only rejected the approach after seeing the results, but I have some of them:
+
+```
+linear
+{'n_neg_per_pos': 4.0} - non unique negative interactions
+linear
+{'n_neg_per_pos': 2.0} - unique negative interactions
+---------------------
+svr
+- one fit iteration 180 mintues... 100 evals impossible
+---------------------
+forest
+{'max_depth': 7.0, 'min_samples_split': 7.0, 'n_estimators': 217.0, 'n_neg_per_pos': 4.0} - non unique negative interactions
+forest
+{'max_depth': 9.0, 'min_samples_split': 18.0, 'n_estimators': 49.0, 'n_neg_per_pos': 9.0} - unique negative interactions + user features approach with popularity
+forest
+---------------------
+boost
+{'learning_rate': 0.02674848891060033, 'max_depth': 6.0, 'min_samples_split': 8.0, 'n_estimators': 100.0, 'n_neg_per_pos': 6.0} - non unique negative interactions
+boost
+{'learning_rate': 0.012713530448885008, 'max_depth': 6.0, 'min_samples_split': 15.0, 'n_estimators': 142.0, 'n_neg_per_pos': 4.0} - unique negative interactions
+```
+
 #### Performance
 I compared all the models with their tunned versions and the result is that it was possible to beat Amazon's score with all of them :bangbang:
 
