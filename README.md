@@ -81,7 +81,7 @@ Main content is in project_1_data_preparation.ipynb and project_1_recommender_an
 ### Conclusion
 
 #### Data Pre-processing
-Data pre-processing part was cool and it was a good opportunity to get familiar with data. I had some issuess while doing that part but at the end I get it done.
+Data pre-processing part was cool and it was a good opportunity to get familiar with data. I had some issuess while doing that part but in the end I get it done.
 
 #### User Features
 I had different ideas for extracting user features after testing them I left only three of them in notebook. My first shot worth to mention was calculating the probability of occurancing given feature in user reservations. Then I tried to test most popular features in user reservations but the results were much worse and this approach was much slower (I might optimize that but I checked the results and they were worse so I didn't work on that anymore). I was looking for the way to improve recommender results and I had the feeling that user features might be done better. I have read some articles about PCA and they way I understood that it might help a little but I didn't notice any crucial improvments. At the end I sticked to simple probability distribution of features.
