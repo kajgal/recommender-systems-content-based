@@ -22,7 +22,7 @@ Most of the code belongs to **[Piotr Zioło](https://github.com/PiotrZiolo)**, w
 
 :heavy_check_mark: **Testing and validating LinearRegression, SVR, RandomForest, XGBoost models with results comparison**
 
-:heavy_check_mark: **Beating Amazon Recommender in results after evaluating with train test split implicit** :bangbang:
+:heavy_check_mark: **Beating Amazon Recommender in results after evaluating models with train test split implicit** :bangbang:
 
 ---
 
