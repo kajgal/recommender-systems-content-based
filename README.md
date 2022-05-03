@@ -65,9 +65,13 @@ project_1_recommender_and_evaluation.ipynb
 |   |   evaluation_measures.py
 |   |   testing.py        
 |           
-\---recommenders (
-    |   amazon_recommender.py
-    |   recommender.py
++---recommenders (
+|   |   amazon_recommender.py
+|   |   recommender.py
+|
+\--img
+    |   performance.png   
+    |   tunning_time.png
 ```
 
 Data, data_preprocessing, evaluation_and_testing, recommenders folders mostly contains pre-prepared code by mentioned author.
@@ -120,6 +124,9 @@ boost
 
 #### Performance
 I compared all the models with their tunned versions and the result is that it was possible to beat Amazon's score with all of them :bangbang:
+
+```
+```
 
 #### Final words
 The project was interesting and educating, it forced to consider several options to get a better result, it was also terribly time-consuming and resource-consuming.
