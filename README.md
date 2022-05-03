@@ -60,7 +60,6 @@ project_1_recommender_and_evaluation.ipynb
 |    |  data_preprocessing_toolkit.py
 |    |  people_identifier.py
 |
-|    
 +---evaluation_and_testing
 |   |   evaluation_measures.py
 |   |   testing.py        
