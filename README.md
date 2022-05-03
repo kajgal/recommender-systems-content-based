@@ -121,11 +121,14 @@ boost
 {'learning_rate': 0.012713530448885008, 'max_depth': 6.0, 'min_samples_split': 15.0, 'n_estimators': 142.0, 'n_neg_per_pos': 4.0} - unique negative interactions
 ```
 
+**[*] For my PC**
+
+![Tunning Time](./img/tunning_time.png)
+
 #### Performance
 I compared all the models with their tunned versions and the result is that it was possible to beat Amazon's score with all of them :bangbang:
 
-```
-```
+![Tunning Time](./img/performance.png)
 
 #### Final words
 The project was interesting and educating, it forced to consider several options to get a better result, it was also terribly time-consuming and resource-consuming.
