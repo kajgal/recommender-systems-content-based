@@ -135,3 +135,20 @@ I compared all the models with their tunned versions and the result is that it w
 
 #### Final words
 The project was interesting and educating, it forced to consider several options to get a better result, it was also terribly time-consuming and resource-consuming.
+
+### 05.05.2022 UPDATE
+
+I have completly finished project on 2nd May but one thing still kept bothering me. As I said in Tunning section, SVR was weird - it was impossible to tune that recommender as one eval took more than 3-4 hours, also single run of that recommender took similar amount of time. Eventually result of my SVR recommender is not the best but when I was testing this (and waited 3 hours just to see results) I got various results (worse and better), one time it was even close to 0.26 in HR10. In the end I left that with another run because I think in this project when other recommenders need at most two minutes it's pointless to consider result from recommender which needs ~ 200 minutes... But still I was curious why it is so slow when other recommenders are pretty fast so I did research on my own.
+I have found interesting post which states that using this version of SVR is the main reason:
+https://stackoverflow.com/questions/47460201/scikit-learn-svr-runs-very-long
+As the post states, LinearSVR should do much better so I tried to go with that. I modified base SVR class accordingly and imported that SVR model.
+
+![Linear SVR](./img/linear_svr.png)
+
+Then I checked how that recommender will work and now the time recomender needed became rational and tunning with 100 evals took 1 hour 30 minutes when before 1 eval took 4 hourse :)
+
+![Tunning SVR](./img/tunning_svr.png)
+
+The results of recommender wasn't game-changing so I finally didn't include any of that in my project as I did everything the project required already but I think it's interesting to consider that the base SVR class clearly stood out from the others and I wonder if the result of the SVR recommendation should be taken into account when the difference in the time needed to determine the recommendation is so drastically huge. What's more, the other recommendations (also the SVR that I reworked, which I have described here) returned quite similar results each time, while the basic, long SVR, depending on the launch, could return 0.17 one time and 0.27 next time. Due to the time needed to set a recommendation and high instability, I found that the SVR without rework should not be taken into account, despite the fact that it was able to return the best result on paper.
+
+![Results SVR](./img/results_svr.png)
