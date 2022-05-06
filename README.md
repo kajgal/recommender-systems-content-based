@@ -91,7 +91,7 @@ Main content is in project_1_data_preparation.ipynb and project_1_recommender_an
 Data pre-processing part was cool and it was a good opportunity to get familiar with data. I had some issuess while doing that part but in the end I get it done.
 
 #### User Features
-I had different ideas for extracting user features after testing them I left only three of them in notebook. My first shot worth to mention was calculating the probability of occurancing given feature in user reservations. Then I tried to test most popular features in user reservations but the results were much worse and this approach was much slower (I might optimize that but I checked the results and they were worse so I didn't work on that anymore). I was looking for the way to improve recommender results and I had the feeling that user features might be done better. I have read some articles about Dimension Reduction and they way I understood that it might help a little but I decided not to include things I don't fully understand. At the end I sticked to simple probability distribution of features.
+I had different ideas for extracting user features after testing them I left only two of them in notebook. My first shot worth to mention was calculating the probability of occurancing given feature in user reservations. Then I tried to test most popular features in user reservations but the results were much worse and this approach was much slower (I might optimize that but I checked the results and they were worse so I didn't work on that anymore). I was looking for the way to improve recommender results and I had the feeling that user features might be done better. I have read some articles about Dimension Reduction and they way I understood that it might help a little but I decided not to include things I don't fully understand. At the end I sticked to simple probability distribution of features.
 
 #### Items Features
 Extracting items features was very quick. To be honest I didn't think much about looking for alternative approach because I think suggested one-hot is very good and it fits to data in my opinion.
@@ -144,6 +144,7 @@ The project was interesting and educating, it forced to consider several options
 I have completly finished project on 2nd May but one thing still kept bothering me. As I said in Tunning section, SVR was weird - it was impossible to tune that recommender as one eval took more than 3-4 hours, also single run of that recommender took similar amount of time. Eventually result of my SVR recommender is not the best but when I was testing this (and waited 3 hours just to see results) I got various results (worse and better), one time it was even close to 0.27 in HR10. In the end I left that with another run because I think in this project when other recommenders need at most two minutes it's pointless to consider result from recommender which needs ~ 200 minutes... But still I was curious why it is so slow when other recommenders are pretty fast (1-2 minutes) so I did research on my own.
 
 I have found interesting post which states that using this version of SVR is the main reason:
+
 https://stackoverflow.com/questions/47460201/scikit-learn-svr-runs-very-long
 
 As the post states, LinearSVR should do much better so I tried to go with that. I modified base SVR class accordingly and imported that SVR model.
