@@ -139,7 +139,7 @@ I compared all the models with their tunned versions and the result is that it w
 #### Final words
 The project was interesting and educating, it forced to consider several options to get a better result, it was also terribly time-consuming and resource-consuming.
 
-### 05.05.2022 UPDATE
+### 05.05.2022 Update - My own additional research about SVR time complexity
 
 I have completly finished project on 2nd May but one thing still kept bothering me. As I said in Tunning section, SVR was weird - it was impossible to tune that recommender as one eval took more than 3-4 hours, also single run of that recommender took similar amount of time. Eventually result of my SVR recommender is not the best but when I was testing this (and waited 3 hours just to see results) I got various results (worse and better), one time it was even close to 0.27 in HR10. In the end I left that with another run because I think in this project when other recommenders need at most two minutes it's pointless to consider result from recommender which needs ~ 200 minutes... But still I was curious why it is so slow when other recommenders are pretty fast (1-2 minutes) so I did research on my own.
 
