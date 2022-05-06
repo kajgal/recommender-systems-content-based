@@ -74,6 +74,9 @@ project_1_recommender_and_evaluation.ipynb
 \--img
     |   performance.png   
     |   tunning_time.png
+    |   linear_svr.png
+    |   results_svr.png
+    |   tunning_svr.png
 ```
 
 Data, data_preprocessing, evaluation_and_testing, recommenders folders mostly contains pre-prepared code by mentioned author.
@@ -144,6 +147,7 @@ I have found interesting post which states that using this version of SVR is the
 https://stackoverflow.com/questions/47460201/scikit-learn-svr-runs-very-long
 
 As the post states, LinearSVR should do much better so I tried to go with that. I modified base SVR class accordingly and imported that SVR model.
+
 https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVR.html#sklearn.svm.LinearSVR
 
 ![Linear SVR](./img/linear_svr.png)
