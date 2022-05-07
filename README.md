@@ -85,6 +85,12 @@ Main content is in project_1_data_preparation.ipynb and project_1_recommender_an
 
 ---
 
+### Results
+
+![Results](./img/performance.png)
+
+---
+
 ### Conclusion
 
 #### Data Pre-processing
@@ -133,8 +139,6 @@ boost
 
 #### Performance
 I compared all the models with their tunned versions and the result is that it was possible to beat Amazon's score with all of them :bangbang:
-
-![Tunning Time](./img/performance.png)
 
 #### Final words
 The project was interesting and educating, it forced to consider several options to get a better result, it was also terribly time-consuming and resource-consuming.
